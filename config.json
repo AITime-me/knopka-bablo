@@ -1,0 +1,11 @@
+{
+  "version":"kb-1", "apiBase":"", "registrationMode":"form", "telegramBot":"",
+  "event":{"date":"","time":"","timezone":"Курган · UTC+5","duration":"","format":"Открытый онлайн-эфир","joinUrl":""},
+  "offers":{"main":{"title":"КНОПКА «БАБЛО»","subtitle":"Из чего на самом деле собирается система продаж эксперта.","cta":"Зарегистрироваться на эфир"}},
+  "speakers":[
+    {"name":"Анастасия Чешуина","initials":"АЧ","role":"Маркетинг и стратегия","description":"Маркетолог, бизнес-стратег, PR-стратег. Позиционирование, продуктовые линейки, личный бренд, продвижение и продажи.","photo":"","achievements":[]},
+    {"name":"Светлана Кузнецова","initials":"СК","role":"Технологии и реализация · AI My Time","description":"Предприниматель, специалист по автоматизации бизнеса, официальный интегратор amoCRM. Цифровые инструменты, коммерческие процессы и искусственный интеллект.","photo":"","achievements":[]}
+  ],
+  "privacy":{"operator":"","policyUrl":"","consentVersion":"kb-consent-1"},
+  "analytics":{"enabled":false,"endpoint":""}
+}
