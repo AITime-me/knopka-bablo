@@ -143,6 +143,17 @@ $('#speakers').innerHTML=config.speakers.map(s=>`<article class="speaker"><div c
 if(config.privacy.operator)$('#privacy-operator').textContent=`Организатор обработки данных: ${config.privacy.operator}.`;
 if(config.privacy.policyUrl){$('#full-policy').href=config.privacy.policyUrl;$('#full-policy').hidden=false;}
 const touched=new Set();
+// Mobile browsers may leave the text field focused while a range is dragged.
+// Hand focus to the actual control before native touch handling, without scrolling.
+function focusTouchedRange(event){
+ const range=event.target;
+ if(!(range instanceof HTMLInputElement)||range.type!=='range')return;
+ const active=document.activeElement;
+ if(active!==range && active instanceof HTMLElement)active.blur();
+ range.focus({preventScroll:true});
+}
+$('#calculator').addEventListener('pointerdown',event=>{if(event.pointerType==='touch'||event.pointerType==='pen')focusTouchedRange(event);},{passive:true});
+$('#calculator').addEventListener('touchstart',focusTouchedRange,{passive:true});
 function parseNumber(value){if(!/^[\d\s\u00a0\u202f]*$/.test(value))return NaN;return Number(value.replace(/\s/g,''));}
 function bindNumber(input,callback,max){
  input.addEventListener('input',()=>{const value=parseNumber(input.value);if(!Number.isSafeInteger(value)||value<0||value>max){input.setCustomValidity(`Введите целое число от 0 до ${fmt(max)}.`);input.reportValidity();return;}input.setCustomValidity('');callback(value);});
