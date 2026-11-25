@@ -1,5 +1,5 @@
 {
-  "version": "kb-3",
+  "version": "kb-4",
   "apiBase": "",
   "registrationMode": "form",
   "telegramBot": "",
@@ -20,12 +20,17 @@
   },
   "speakers": [],
   "privacy": {
-    "operator": "",
+    "operator": "ИП Кузнецова Светлана Викторовна",
     "policyUrl": "",
     "consentVersion": "kb-consent-1"
   },
   "analytics": {
     "enabled": false,
     "endpoint": ""
+  },
+  "legalSources": {
+    "policy": "https://aimytime.ru/privacy",
+    "consent": "https://aimytime.ru/personal-data-consent",
+    "offer": "https://aimytime.ru/offer"
   }
 }
