@@ -1,8 +1,8 @@
 {
-  "version": "kb-8",
+  "version": "kb-telegram-13917",
   "apiBase": "",
-  "registrationMode": "form",
-  "telegramBot": "",
+  "registrationMode": "telegram",
+  "telegramBot": "https://t.me/KnopkaBabloLiveBot?start=kb_landing",
   "event": {
     "date": "",
     "time": "",
@@ -21,7 +21,7 @@
   "speakers": [],
   "privacy": {
     "operator": "ИП Кузнецова Светлана Викторовна",
-    "policyUrl": "",
+    "policyUrl": "./legal/privacy.html",
     "consentVersion": "kb-consent-1"
   },
   "analytics": {
@@ -29,8 +29,7 @@
     "endpoint": ""
   },
   "legalSources": {
-    "policy": "https://aimytime.ru/privacy",
-    "consent": "https://aimytime.ru/personal-data-consent",
-    "offer": "https://aimytime.ru/offer"
+    "policy": "./legal/privacy.html",
+    "offer": "./legal/offer.html"
   }
 }
